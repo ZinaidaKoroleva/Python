@@ -73,3 +73,16 @@
 
 
 # 5. Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, содержащий сумму многочленов.
+
+# def export_from_file(path):
+#     with open(path, "r") as file:
+#         polinom = file.read()
+#     return polinom
+#
+# path1 = "file1.txt"
+# path2 = "file2.txt"
+#
+# polynom1 = export_from_file(path1)
+# polynom2 = export_from_file(path2)
+# print(polynom1)
+# print(polynom2)
