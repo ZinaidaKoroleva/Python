@@ -74,15 +74,53 @@
 
 # 5. Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, содержащий сумму многочленов.
 
-# def export_from_file(path):
-#     with open(path, "r") as file:
-#         polinom = file.read()
-#     return polinom
-#
-# path1 = "file1.txt"
-# path2 = "file2.txt"
-#
-# polynom1 = export_from_file(path1)
-# polynom2 = export_from_file(path2)
-# print(polynom1)
-# print(polynom2)
+def export_from_file(path):
+    with open(path, "r") as file:
+        polinom = file.read()
+    return polinom
+
+path1 = "file1.txt"
+path2 = "file2.txt"
+
+polynom1 = export_from_file(path1)
+polynom2 = export_from_file(path2)
+print(polynom1)
+print(polynom2)
+polynom1 = polynom1.split("+")
+polynom2 = polynom2.split("+")
+print(polynom1)
+print(polynom2)
+
+for indx,value in enumerate(polynom1):
+    polynom1[indx] = list(map(int,(value.split("*x**"))))
+
+for indx,value in enumerate(polynom2):
+    polynom2[indx] = list(map(int,(value.split("*x**"))))
+
+print(polynom1)
+print(polynom1)
+
+result_pol = polynom1+polynom2
+
+polyn_dict = {}
+for value in result_pol:
+    if len(value)>1:
+        if value[1] in polyn_dict.keys():
+            polyn_dict[value[1]] +=value[0]
+        else:
+            polyn_dict[value[1]] = value[0]
+    else:
+        if 0 in polyn_dict.values():
+            polyn_dict[0] +=value[0]
+        else:
+            polyn_dict[0] = value[0]
+
+result_pol = dict(sorted(polyn_dict.items(), reverse=True))
+finish_line = ""
+for stepen,koeff in result_pol.items():
+    if stepen > 1:
+        finish_line +=f"{koeff}*x**{stepen}+"
+    if stepen == 0:
+        finish_line += f"{koeff}"
+
+print(finish_line)
