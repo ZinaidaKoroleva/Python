@@ -56,21 +56,21 @@
 # print(result)
 # Решение 2:
 
-a = [3, 1, 2, 3, 4, 6]
-print(a)
-h = [1 if i % 2 == 0 else 0 for i in a]
-print(h)
-even = [i for i in a if i % 2 == 0]
-odd = [i for i in a if i % 2 == 1]
-even.sort(reverse=True)
-odd.sort()
-print(even)
-print(odd)
-
-for index,value in enumerate(h):
-    if value == 1:
-        h[index] = even.pop(0)
-    else:
-        h[index] = odd.pop(0)
-print(h)
-
+# a = [3, 1, 2, 3, 4, 6]
+# print(a)
+# h = [1 if i % 2 == 0 else 0 for i in a]
+# print(h)
+# even = [i for i in a if i % 2 == 0]
+# odd = [i for i in a if i % 2 == 1]
+# even.sort(reverse=True)
+# odd.sort()
+# print(even)
+# print(odd)
+#
+# for index,value in enumerate(h):
+#     if value == 1:
+#         h[index] = even.pop(0)
+#     else:
+#         h[index] = odd.pop(0)
+# print(h)
+#
