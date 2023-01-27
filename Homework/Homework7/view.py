@@ -5,8 +5,8 @@ def success():
 
 def menu():
     start = int(input('Меню(введите цифру): \n 1: Ввести новые данные \n 2: Показать весь справочник \n'
-                 '3: Сортировка по имени или id \n 4: Вывод ФИО \n'))
-    if start == 1 or start == 2 or start == 3 or start == 4:
+                 '3: Сортировка(по имени или id) \n 4: Вывод ФИО \n 5: Выход \n'))
+    if start == 1 or start == 2 or start == 3 or start == 4 or start == 5:
         return start
     else:
         return input_error()
@@ -15,12 +15,12 @@ def get_date():
     # id, имя, фамилию, номер
     # телефона, комментрий
     new_number = ''
-    id = input('Введите id: ')
+    id = int(input('Введите id: '))
     name = input('Введите имя: ')
     surname = input('Введите фамилию: ')
     phone_number = input('Введите номер телефона: ')
     comm = input('Введите комментарий: ')
-    new_number = 'id: '+ id + ' Имя: '+name + ' Фамилия: '+ surname + ' Номер телефона: '+ phone_number + ' Комментарий: '+ comm
+    new_number = 'id:'+ id + ' Имя:'+name + ' Фамилия: '+ surname + ' Номер телефона: '+ phone_number + ' Комментарий: '+ comm
     return new_number
 
 def menu_sort():
