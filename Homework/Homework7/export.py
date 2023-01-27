@@ -11,5 +11,4 @@ def print_names():
     with open('Phonebook.txt', 'r') as file:
         for line in file.readlines():
             elem = line.split(" ")
-            print(elem[1],elem[2])
-
+            print(elem[1], elem[2])

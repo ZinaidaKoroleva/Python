@@ -1,5 +1,5 @@
 def sort_id():
-    with open('Phonebook.txt', 'r') as file:
+    with open('Phonebook.txt', 'r+') as file:
         data = file.readlines()
         data_list = []
         for line in data:
@@ -12,7 +12,7 @@ def sort_id():
     return data
 
 def sort_name():
-    with open('Phonebook.txt', 'r') as file:
+    with open('Phonebook.txt', 'r+') as file:
         data = file.readlines()
         data_list = []
         for line in data:
